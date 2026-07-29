@@ -1,0 +1,43 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "lint-theme-setup",
+			"type": "shell",
+			"command": "bun",
+			"args": [
+				"run",
+				"lint",
+				"--",
+				"src/app/layout.tsx",
+				"src/app/providers.tsx",
+				"src/components/theme-toggle.tsx",
+				"src/app/page.tsx"
+			],
+			"isBackground": false,
+			"problemMatcher": [
+				"$eslint-stylish"
+			],
+			"group": "build"
+		},
+		{
+			"label": "lint-theme-setup",
+			"type": "shell",
+			"command": "bun",
+			"args": [
+				"run",
+				"lint",
+				"--",
+				"src/app/layout.tsx",
+				"src/app/providers.tsx",
+				"src/components/theme-toggle.tsx",
+				"src/app/page.tsx"
+			],
+			"isBackground": false,
+			"problemMatcher": [
+				"$eslint-stylish"
+			],
+			"group": "build"
+		}
+	]
+}
