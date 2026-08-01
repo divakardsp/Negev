@@ -1,39 +1,72 @@
 @import "tailwindcss";
 
+@theme inline {
+    --color-background: var(--background);
+    --color-foreground: var(--foreground);
+
+    --color-surface: var(--surface);
+    --color-surface-foreground: var(--surface-foreground);
+
+    --color-primary: var(--primary);
+    --color-primary-hover: var(--primary-hover);
+    --color-primary-foreground: var(--primary-foreground);
+
+    --color-muted: var(--muted);
+    --color-muted-foreground: var(--muted-foreground);
+
+    --color-border: var(--border);
+
+    --color-ring: var(--ring);
+
+    --radius: var(--radius);
+}
+
 :root {
-    --background: #f7f3eb;
-    --foreground: #1f2430;
-    --surface: #fffaf2;
-    --surface-muted: #efe4d3;
-    --border: rgba(31, 36, 48, 0.12);
-    --accent: #b45309;
-    --accent-foreground: #fff7ed;
-    color-scheme: light;
+    --background: #f8fafc;
+    --surface: #fcfcfd;
+    --foreground: #0f172a;
+
+    --primary: #2f6fff;
+    --primary-hover: #1e5cf7;
+    --primary-foreground: #ffffff;
+
+    --muted: #f1f5f9;
+    --muted-foreground: #64748b;
+
+    --border: #e2e8f0;
+    --ring: #8bb5ff;
+
+    --success: #22c55e;
+    --warning: #f59e0b;
+    --destructive: #ef4444;
+
+    --radius: 12px;
 }
 
 .dark {
-    --background: #0f172a;
-    --foreground: #f8fafc;
-    --surface: #111c33;
-    --surface-muted: #1e293b;
-    --border: rgba(248, 250, 252, 0.14);
-    --accent: #f59e0b;
-    --accent-foreground: #111827;
-    color-scheme: dark;
-}
+    --background: #030303;
+    --surface: #0a0a0a;
+    --foreground: #fafafa;
 
-* {
-    border-color: var(--border);
+    --primary: #2f6fff;
+    --primary-hover: #1e5cf7;
+    --primary-foreground: #ffffff;
+
+    --muted: #171717;
+    --muted-foreground: #a1a1aa;
+
+    --border: #262626;
+    --ring: #8bb5ff;
+
+    --success: #22c55e;
+    --warning: #f59e0b;
+    --destructive: #ef4444;
 }
 
 body {
     background: var(--background);
     color: var(--foreground);
-    font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
-    min-height: 100vh;
-}
-
-::selection {
-    background: var(--accent);
-    color: var(--accent-foreground);
+    transition:
+        background-color 200ms ease,
+        color 200ms ease;
 }
