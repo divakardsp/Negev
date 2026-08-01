@@ -1,5 +1,19 @@
 import { pgTable, text, jsonb, timestamp } from "drizzle-orm/pg-core";
 
+export const users = pgTable("users", {
+    id: text("id").primaryKey(),
+    clerkId: text("clerk_id").notNull().unique(),
+    firstName: text("first_name").notNull(),
+    lastName: text("last_name").notNull(),
+    email: text("email").notNull(),
+    createdAt: timestamp("created_at", { withTimezone: true })
+        .notNull()
+        .defaultNow(),
+    updatedAt: timestamp("updated_at", { withTimezone: true })
+        .notNull()
+        .defaultNow(),
+});
+
 export const corsairIntegrations = pgTable("corsair_integrations", {
     id: text("id").primaryKey(),
     createdAt: timestamp("created_at", { withTimezone: true })
