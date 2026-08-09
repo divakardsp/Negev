@@ -24,7 +24,7 @@ export default function RootLayout({
         <ClerkProvider>
         <ThemeProvider
           attribute="class"
-          defaultTheme="dark"
+          defaultTheme="light"
           enableSystem={false}
         >
           {children}
