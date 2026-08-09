@@ -38,6 +38,17 @@
 				"$eslint-stylish"
 			],
 			"group": "build"
+		},
+		{
+			"label": "diagnose-migrate",
+			"type": "shell",
+			"command": "bun",
+			"args": [
+				"run",
+				"migrate"
+			],
+			"isBackground": false,
+			"group": "build"
 		}
 	]
 }
